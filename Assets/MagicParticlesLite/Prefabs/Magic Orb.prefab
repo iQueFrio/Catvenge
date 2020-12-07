@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4015850864555988}
   - component: {fileID: 198683964593574260}
   - component: {fileID: 199740422434755458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,7 +222,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0, g: 0.5448277, b: 1, a: 1}
+      maxColor: {r: 0, g: 1, b: 0.89932394, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -4724,7 +4724,7 @@ GameObject:
   - component: {fileID: 4485151109746918}
   - component: {fileID: 198111710524089246}
   - component: {fileID: 199578419139126016}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4935,7 +4935,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.5514706, g: 0.77728206, b: 1, a: 1}
+      maxColor: {r: 0.5529412, g: 1, b: 0.9572381, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -9410,7 +9410,7 @@ GameObject:
   - component: {fileID: 4827232773872640}
   - component: {fileID: 198347528150434826}
   - component: {fileID: 199976004462319922}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Smoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14065,7 +14065,7 @@ GameObject:
   - component: {fileID: 4149530738903622}
   - component: {fileID: 198470868727049936}
   - component: {fileID: 199894735345823932}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14276,7 +14276,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.21620889, g: 0.70610595, b: 0.9485294, a: 0.15686275}
+      maxColor: {r: 0.21568623, g: 0.9490196, b: 0.92030644, a: 0.15686275}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -18720,7 +18720,7 @@ GameObject:
   - component: {fileID: 4753197992899194}
   - component: {fileID: 198951959689354048}
   - component: {fileID: 199293778347593414}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Dust
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18931,7 +18931,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.102941155, g: 0.55456406, b: 1, a: 0.09803922}
+      maxColor: {r: 0.10196078, g: 1, b: 0.94886255, a: 0.09803922}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -23433,7 +23433,7 @@ GameObject:
   - component: {fileID: 4667868370430098}
   - component: {fileID: 5872163433447555377}
   - component: {fileID: -3887255971436570548}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Magic Orb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23500,7 +23500,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4162544056945390}
   - component: {fileID: 108369614880845956}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23593,7 +23593,7 @@ GameObject:
   - component: {fileID: 4354392012451544}
   - component: {fileID: 198267160947838692}
   - component: {fileID: 199393909710585820}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Small Particles
   m_TagString: Untagged
   m_Icon: {fileID: 0}

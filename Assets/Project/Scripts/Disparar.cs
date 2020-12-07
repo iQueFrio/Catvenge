@@ -10,14 +10,17 @@ public class Disparar : MonoBehaviour
     public GameObject BalaPrefab;
     //Agregar Bala Velocidad
     public float BalaVelocidad;
- 
+    //Destruir al contacto
+    private
+    GameObject BalaTemporal;
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.C))
         {
             //1-Instanciar la BalaPrefab en las posiciones de BalaInicio
-            GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
+            BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
  
             //Obtener Rigidbody para agregar Fuerza. 
             Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
