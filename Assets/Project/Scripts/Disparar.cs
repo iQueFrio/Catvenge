@@ -29,7 +29,7 @@ public class Disparar : MonoBehaviour
             rb.AddForce(transform.forward * BalaVelocidad);
  
             //Debemos Destruir la bala
-            Destroy(BalaTemporal, 3f);
+            Destroy(BalaTemporal, 0.7f);
         }
     }
 }
