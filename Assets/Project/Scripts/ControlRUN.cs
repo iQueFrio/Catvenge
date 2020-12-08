@@ -15,7 +15,7 @@ public class ControlRUN : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.Joystick1Button5) )
         {
             anim.SetTrigger("Run");
             transform.Translate(Vector3.forward * speedrun * Time.deltaTime);

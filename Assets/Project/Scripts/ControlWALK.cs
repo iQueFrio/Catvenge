@@ -20,17 +20,17 @@ public class ControlWALK : MonoBehaviour
             anim.SetTrigger("Walk");
             transform.Translate(Vector3.forward * speedwalk * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.S))
+        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.Joystick1Button2))
         {
             anim.SetTrigger("Walk");
             transform.Translate(Vector3.back * speedwalk * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.A))
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.Joystick1Button3))
         {
             anim.SetTrigger("Walk");
             transform.Translate(Vector3.left * speedwalk * Time.deltaTime);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.Joystick1Button1))
         {
             anim.SetTrigger("Walk");
             transform.Translate(Vector3.right * speedwalk * Time.deltaTime);

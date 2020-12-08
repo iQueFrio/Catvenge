@@ -17,7 +17,7 @@ public class Disparar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.C) || Input.GetKey(KeyCode.Joystick1Button0))
         {
             //1-Instanciar la BalaPrefab en las posiciones de BalaInicio
             BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
