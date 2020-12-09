@@ -13,6 +13,14 @@ public class Disparar : MonoBehaviour
     //Destruir al contacto
     private
     GameObject BalaTemporal;
+    //Agregar sonido de disparo 
+    public AudioClip sonidoDisparo;
+    AudioSource audio;
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,7 +35,10 @@ public class Disparar : MonoBehaviour
        
             //Agregar la fuerza a la Bala
             rb.AddForce(transform.forward * BalaVelocidad);
- 
+
+            //Sonido del disparo
+            audio.PlayOneShot(sonidoDisparo);
+            
             //Debemos Destruir la bala
             Destroy(BalaTemporal, 0.7f);
         }
