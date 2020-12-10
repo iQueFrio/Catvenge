@@ -14,7 +14,7 @@ public class ControlATTACK : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.Joystick1Button0))
+        if (Input.GetKey(KeyCode.C) || Input.GetKey(KeyCode.JoystickButton0))
         {
             anim.SetTrigger("Attack");
         }
