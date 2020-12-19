@@ -20,11 +20,10 @@ public class VidaPlayer : MonoBehaviour
     {
         vida = Mathf.Clamp(vida, 0, 100);
         barraDeVida.fillAmount = vida/100;
-        /*
-        //Lo intente asi pero no cargo bien el menu quiza otra forma o ver que paso con esta opcion 
+        //Lo intente asi pero no cargo bien el menu quiza tu si lo veas bien, si no probar otra opcion 
         if(vida == 0){
             SceneManager.LoadScene("Menu");
         }
-        */
+        
     }
 }
