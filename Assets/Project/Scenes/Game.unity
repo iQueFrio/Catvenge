@@ -409,6 +409,7 @@ MonoBehaviour:
   vida: 100
   barraDeVida: {fileID: 150794176}
   TextoPerdido: {fileID: 660345772}
+  LimiteTiempo: {fileID: 1095410701}
 --- !u!114 &33680756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4996,7 +4997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4568427819527816, guid: b8c53b8156d345fda2ba96b7855e2178, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.22
+      value: 64.9
       objectReference: {fileID: 0}
     - target: {fileID: 4568427819527816, guid: b8c53b8156d345fda2ba96b7855e2178, type: 3}
       propertyPath: m_LocalPosition.y

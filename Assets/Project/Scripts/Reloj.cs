@@ -48,9 +48,9 @@ public class Reloj : MonoBehaviour
 
     public void ActualizarReloj(float tiempoEnSegundos)
     {
-        float vida = life.GetComponent<VidaPlayer>().vida;
-        Debug.Log("La vida es: " + vida);
-        Debug.Log("El tiempo es: " + tiempoEnSegundos);
+      float vida = life.GetComponent<VidaPlayer>().vida;
+    
+      if(tiempoEnSegundos < 181f){
         if(enemy1 != null || enemy2 != null || enemy3 != null || enemy4 != null || enemy5 != null || enemy6 != null || enemy7 != null || enemy8 != null){
           if(vida != 0f){
             int minutos = 0;
@@ -68,6 +68,6 @@ public class Reloj : MonoBehaviour
             myText.text = textoDelReloj;
           }
         }
-  }
-
+      }  
+    }
 }
