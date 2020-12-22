@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3973000336970556304}
   - component: {fileID: 3407139363641892326}
   - component: {fileID: 3338484562539034620}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -134,7 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7509497946712354357}
   - component: {fileID: 6081592664211058524}
-  m_Layer: 0
+  m_Layer: 16
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}

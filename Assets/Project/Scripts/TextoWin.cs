@@ -32,6 +32,7 @@ public class TextoWin : MonoBehaviour
         if(enemy1 == null && enemy2 == null && enemy3 == null && enemy4 == null && enemy5 == null && enemy6 == null && enemy7 == null && enemy8 == null)
         //if (enemy4 == null)
         {
+            TextoVictoria.text = "¡Has Ganado!";
             TextoVictoria.gameObject.SetActive(true);
             tiempo += Time.deltaTime; 
             if(tiempo >= 7){

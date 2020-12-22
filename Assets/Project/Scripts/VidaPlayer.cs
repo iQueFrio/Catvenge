@@ -8,11 +8,17 @@ public class VidaPlayer : MonoBehaviour
 {
     public float vida = 100;
     public Image barraDeVida;
+    public Text TextoPerdido;
+    float tiempo;
+
+    public void Awake() {
+        TextoPerdido.gameObject.SetActive(false);
+    }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        tiempo = 0f;
     }
 
     // Update is called once per frame
@@ -22,7 +28,12 @@ public class VidaPlayer : MonoBehaviour
         barraDeVida.fillAmount = vida/100;
         //Lo intente asi pero no cargo bien el menu quiza tu si lo veas bien, si no probar otra opcion 
         if(vida == 0){
-            SceneManager.LoadScene("Menu");
+            TextoPerdido.text = "Lo siento, ¡Has Perdido!";
+            TextoPerdido.gameObject.SetActive(true);
+            tiempo += Time.deltaTime; 
+            if(tiempo >= 4){
+                SceneManager.LoadScene("Menu");
+            }
         }
         
     }
