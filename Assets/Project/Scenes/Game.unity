@@ -378,6 +378,7 @@ MonoBehaviour:
   enemy6: {fileID: 918846862}
   enemy7: {fileID: 1161508495}
   enemy8: {fileID: 1822580642}
+  LimiteTiempo: {fileID: 1095410701}
 --- !u!114 &33680753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2952,6 +2953,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833461da7a3fdd448ad581df4d823beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idPaciente: 
+  idEspecialista: 
 --- !u!1 &625404412
 GameObject:
   m_ObjectHideFlags: 0
@@ -6348,6 +6351,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 833461da7a3fdd448ad581df4d823beb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  idPaciente: 
+  idEspecialista: 
 --- !u!4 &1547542644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 73ef0b63ffe19f94ab35e4475b345d70,

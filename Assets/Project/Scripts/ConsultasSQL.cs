@@ -11,12 +11,12 @@ public class ConsultasSQL
     */
     public string[] getAngleEyes()
     {
-        string[] ids= new string[2];
+        string[] ids= new string[5];
         ConexionBD conexion = new ConexionBD();
         MySqlConnection conn = conexion.getConnection();
         try
         {
-           string sql = "SELECT desviacion_izq, desviacion_der  FROM ojo o, api a WHERE o.Paciente_idPaciente = a.idPaciente";
+           string sql = "SELECT desviacion_izq, desviacion_der, idPaciente, idEspecialista  FROM ojo o, api a WHERE o.Paciente_idPaciente = a.idPaciente";
 
            MySqlCommand cmd = new MySqlCommand(sql, conn);
            MySqlDataReader rdr = cmd.ExecuteReader();
@@ -26,6 +26,8 @@ public class ConsultasSQL
                 //Debug.Log(rdr[0] + " -- " + rdr[1]);
                 ids[0] = rdr[0].ToString();
                 ids[1] = rdr[1].ToString();
+                ids[2] = rdr[2].ToString();
+                ids[3] = rdr[3].ToString();
             }
            
             rdr.Close();
@@ -40,11 +42,6 @@ public class ConsultasSQL
         return ids;
         
     }
-
-
-    /*
-    * Consultas del modulo de prediagnostico 
-    */
     public string[] getIds()
     {
         string[] ids= new string[2];
@@ -59,7 +56,7 @@ public class ConsultasSQL
 
            while (rdr.Read())
            {
-                Debug.Log(rdr[0] + " -- " + rdr[1] + "--" + rdr[2] + " -- " + rdr[3]);
+                //Debug.Log(rdr[0] + " -- " + rdr[1] + "--" + rdr[2] + " -- " + rdr[3]);
                 ids[0] = rdr[1].ToString();
                 ids[1] = rdr[2].ToString();
             }
@@ -76,6 +73,29 @@ public class ConsultasSQL
         return ids;
         
     }
+
+    public void insertTratamiento(string tipoTratamiento, string duracion, string duraciontotal,  string idPaciente, string idEspecialista)
+    {
+        string monthVar = System.DateTime.Now.ToString("yyyy-MM-dd");
+        ConexionBD conexion = new ConexionBD();
+        MySqlConnection conn = conexion.getConnection();
+        MySqlCommand cmd = conn.CreateCommand();
+
+        cmd.CommandText = "INSERT INTO Tratamiento (TipoDeTratamiento,duracion,duraciontotal,fecha,Paciente_idPaciente,Especialista_idEspecialista) VALUES(?TipoDeTratamiento,?duracion,?duraciontotal,?fecha,?Paciente_idPaciente,?Especialista_idEspecialista)";
+        cmd.Parameters.Add("?TipoDeTratamiento", MySqlDbType.VarChar).Value = tipoTratamiento;
+        cmd.Parameters.Add("?duracion", MySqlDbType.Int32).Value = duracion;
+        cmd.Parameters.Add("?duraciontotal", MySqlDbType.VarChar).Value = duraciontotal;
+        cmd.Parameters.Add("?fecha", MySqlDbType.Date).Value = monthVar;
+        cmd.Parameters.Add("?Paciente_idPaciente", MySqlDbType.Int32).Value = idPaciente;
+        cmd.Parameters.Add("?Especialista_idEspecialista", MySqlDbType.Int32).Value = idEspecialista;
+        cmd.ExecuteNonQuery();
+        conn.Close();
+    }
+
+    /*
+    * Consultas del modulo de prediagnostico 
+    */
+    
 
     public void insertOjo(string idPaciente, string angleValueR, string angleValueL, string prismas)
     {

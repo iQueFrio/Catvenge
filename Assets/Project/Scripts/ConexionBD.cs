@@ -21,7 +21,7 @@ public class ConexionBD
         }
         catch (MySqlException ex)
         {
-            Debug.Log("Conexion fallida: ");
+            Debug.Log("Conexion fallida: " + ex);
         }
         return conn;
     }

@@ -33,7 +33,16 @@ public class VidaPlayer : MonoBehaviour
             TextoPerdido.text = "Lo siento, ¡Has Perdido!";
             TextoPerdido.gameObject.SetActive(true);
             tiempo += Time.deltaTime; 
+            
             if(tiempo >= 4){
+                ConsultasSQL sql = new ConsultasSQL(); 
+                CameraSettings camera = GameObject.Find("LeftEye").GetComponent<CameraSettings>();
+                string paciente = camera.idPaciente;
+                string especialista = camera.idEspecialista;
+                //Debug.Log("Paciente " + paciente + " Especialista "+ especialista);
+                string duracion = LimiteTiempo.text.ToString();
+                sql.insertTratamiento("Manejo de Contrastes","10",duracion,paciente,especialista);
+                //Debug.Log(paciente + " " + especialista + " " + LimiteTiempo.text);
                 SceneManager.LoadScene("Menu");
             }
         }

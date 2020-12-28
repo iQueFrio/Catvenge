@@ -15,6 +15,7 @@ public class TextoWin : MonoBehaviour
     public GameObject enemy6;
     public GameObject enemy7;
     public GameObject enemy8;
+    public Text LimiteTiempo;
     float tiempo;
     // Start is called before the first frame update
     void Start()
@@ -34,8 +35,17 @@ public class TextoWin : MonoBehaviour
         {
             TextoVictoria.text = "¡Has Ganado!";
             TextoVictoria.gameObject.SetActive(true);
-            tiempo += Time.deltaTime; 
-            if(tiempo >= 7){
+            tiempo += Time.deltaTime;
+            /*Guardar los resultados de la terapia*/
+            
+            /*Regresar al menu principal*/
+            if(tiempo >= 4){             
+                ConsultasSQL sql = new ConsultasSQL(); 
+                CameraSettings camera = GameObject.Find("LeftEye").GetComponent<CameraSettings>();
+                string paciente = camera.idPaciente;
+                string especialista = camera.idEspecialista;
+                string duracion = LimiteTiempo.text.ToString();
+                sql.insertTratamiento("Manejo de Contrastes","10",duracion,paciente,especialista);  
                 SceneManager.LoadScene("Menu");
             }
         }

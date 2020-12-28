@@ -10,14 +10,17 @@ public class CameraSettings : MonoBehaviour
     
     //StrabismusData data;
     Camera cam;
-
+    public string idPaciente;
+    public string idEspecialista;
     void Awake()
     {
         cam = gameObject.GetComponent<Camera>();
         // Aquí se escoge si esta cámara corresponde al ojo estrábico.
         ConsultasSQL sql = new ConsultasSQL();
         string[] eyes = sql.getAngleEyes();
-        Debug.Log("Ojos: " + eyes[0] + "--" +eyes[1]);
+        //Debug.Log("Ojos: " + eyes[0] + "--" +eyes[1]);
+        idPaciente = eyes[2];
+        idEspecialista = eyes[3];
         /*Establece que ve cada ojo*/
         if(!eyes[0].Equals("0") || !eyes[1].Equals("0")){
             if(gameObject.transform.name == "LeftEye" && !eyes[0].Equals("0")){ // Ojo Izquierdo con estrabismo
