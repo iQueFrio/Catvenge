@@ -45,7 +45,7 @@ public class TextoWin : MonoBehaviour
                 string paciente = camera.idPaciente;
                 string especialista = camera.idEspecialista;
                 string duracion = LimiteTiempo.text.ToString();
-                sql.insertTratamiento("Manejo de Contrastes","10",duracion,paciente,especialista);  
+                sql.insertTratamiento("Manejo de Contrastes","Sin especificar",duracion,paciente,especialista);  
                 SceneManager.LoadScene("Menu");
             }
         }

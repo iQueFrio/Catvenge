@@ -41,7 +41,7 @@ public class VidaPlayer : MonoBehaviour
                 string especialista = camera.idEspecialista;
                 //Debug.Log("Paciente " + paciente + " Especialista "+ especialista);
                 string duracion = LimiteTiempo.text.ToString();
-                sql.insertTratamiento("Manejo de Contrastes","10",duracion,paciente,especialista);
+                sql.insertTratamiento("Manejo de Contrastes","Sin especificar",duracion,paciente,especialista);
                 //Debug.Log(paciente + " " + especialista + " " + LimiteTiempo.text);
                 SceneManager.LoadScene("Menu");
             }
