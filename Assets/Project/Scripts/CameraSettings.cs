@@ -25,10 +25,15 @@ public class CameraSettings : MonoBehaviour
         if(!eyes[0].Equals("0") || !eyes[1].Equals("0")){
             if(gameObject.transform.name == "LeftEye" && !eyes[0].Equals("0")){ // Ojo Izquierdo con estrabismo
                 cam.cullingMask = 1 << 0 | 1<< 2 | 1 << 5 | 1 << 9 | 1 << 10 | 1 << 11 | 1 << 12 | 1 << 16;
-            }else if(gameObject.transform.name == "RightEye" && !eyes[1].Equals("0")){ // Ojo derecho con estrabismo
+                //cam.cullingMask = 1 << 0 | 1 << 2 | 1 << 5 | 1 << 9 | 1 << 10 | 1 << 13 | 1 << 14 | 1 << 16;
+            }
+            else if(gameObject.transform.name == "RightEye" && !eyes[1].Equals("0")){ // Ojo derecho con estrabismo
                 cam.cullingMask = 1 << 0 | 1<< 2 | 1 << 5 | 1 << 9 | 1 << 10 | 1 << 11 | 1 << 12 | 1 << 16;
-            }else{
+                //cam.cullingMask = 1 << 0 | 1 << 2 | 1 << 5 | 1 << 9 | 1 << 10 | 1 << 13 | 1 << 14 | 1 << 16;
+            }
+            else{
                 cam.cullingMask = 1 << 0 | 1<< 2 | 1 << 5 | 1 << 9 | 1 << 10 | 1 << 13 | 1 << 14 | 1 << 16;
+                //cam.cullingMask = 1 << 0 | 1 << 2 | 1 << 5 | 1 << 9 | 1 << 10 | 1 << 11 | 1 << 12 | 1 << 16;
             }
         }else{
             cam.cullingMask = 1 << 0 | 1<< 2 | 1 << 5 | 1 << 9 | 1 << 10 | 1 << 11 | 1 << 12 | 1 << 16;
