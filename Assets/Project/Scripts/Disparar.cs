@@ -10,23 +10,37 @@ public class Disparar : MonoBehaviour
     public GameObject BalaPrefab;
     //Agregar Bala Velocidad
     public float BalaVelocidad;
- 
+    //Destruir al contacto
+    private
+    GameObject BalaTemporal;
+    //Agregar sonido de disparo 
+    public AudioClip sonidoDisparo;
+    AudioSource audio;
+
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.C))
+        if (Input.GetKeyUp(KeyCode.C) || Input.GetKey(KeyCode.JoystickButton0))
         {
             //1-Instanciar la BalaPrefab en las posiciones de BalaInicio
-            GameObject BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
+            BalaTemporal = Instantiate(BalaPrefab, BalaInicio.transform.position, BalaInicio.transform.rotation) as GameObject;
  
             //Obtener Rigidbody para agregar Fuerza. 
             Rigidbody rb = BalaTemporal.GetComponent<Rigidbody>();
        
             //Agregar la fuerza a la Bala
             rb.AddForce(transform.forward * BalaVelocidad);
- 
+
+            //Sonido del disparo
+            audio.PlayOneShot(sonidoDisparo);
+            
             //Debemos Destruir la bala
-            Destroy(BalaTemporal, 3f);
+            Destroy(BalaTemporal, 0.7f);
         }
     }
 }

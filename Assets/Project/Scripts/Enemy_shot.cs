@@ -59,7 +59,7 @@ public class Enemy_shot : MonoBehaviour
                     //Agregar la fuerza a la Bala
                     rb.AddForce(transform.forward * 1000);
                     //Debemos Destruir la bala
-                    Destroy(BalaTemporal, 3f);
+                    Destroy(BalaTemporal, 1.5f);
                     tiempo = 0;
                 }
             }

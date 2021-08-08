@@ -31,5 +31,6 @@ public class Destruir : MonoBehaviour
         }
         else
             count += 1;
+        Destroy(other.gameObject);
     }
 }
